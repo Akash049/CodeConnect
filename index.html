@@ -1,17 +1,92 @@
 <html>
   <head>
+    <title>CodeConnect</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
+    <style>
+    @font-face {
+        font-family: 'Lobster'; 
+        src: url("assets/fonts/Lobster_1.3.otf") format("opentype");
+        font-style: normal;
+    }
+    .profile-image {
+      max-width:100%;
+      max-height:100%;
+      border-radius:50%;
+      border:0px solid #000;
+    }
+    .profile-name {
+      font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size:150%;
+    }
+    .profile-description {
+      font-family:cursive;
+      font-size:90%;
+      color: #888;
+    }
+    .blog-date {
+      font-size:90%;
+      color:#ababab;
+      margin-bottom:10%;
+    }
+    .blog-content {
+      font-size:120%;
+    }
+    </style>
   </head>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <a href="" class="navbar-brand">
-        CodeConnect
-    </a>
+
+<body>
+  <nav class="navbar navbar-inverse" style="border-radius:0;">
+    <div class="container-fluid">
+      <div class="navbar-header">
+          <a href="" class="navbar-brand" style="color:white;">
+              CodeConnect
+          </a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">myBlog</a></li>
+          <li><a href="#">About me</a></li>
+          <li><a href="#">Contact</a></li>
+      </ul>  
+    </div>
+  </nav>
+  <div class="main row"> 
+    <div class="col-sm-3 profile">
+      <div style="width:70%;margin:15%;text-align:center;">
+        <div style="width:40%;margin-left:30%;margin-right:30%;margin-bottom:15%;">
+          <img src="assets/images/profile.jpg" class="profile-image">
+        </div>
+        <p class="profile-name">Akash Chandra</p>
+        <p class="profile-description">Full Stack Software Engineer@myCol.in , Blogger , Traveller</p>
+        <div>
+          <button><i class="fa fa-facebook" aria-hidden="true"></i></button>
+          <button><i class="fa fa-linkedin-square" aria-hidden="true"></i></button>
+          <button><i class="fa fa-github" aria-hidden="true"></i></button>
+          <button><i class="fa fa-twitter" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-5 content">
+      <h1 class="blog-head">Setting up nginx server in MacOS</h1>
+      <p class="blog-date">September 27, 2017</p>
+      <div class="blog-content">
+        <p>To set up an <b>nginx</b> server in MaxOS you require Homebrew preinstalled in your system. If Homebrew is already installed 
+      then you may skin the Homebrew installation steps.</p>
+       <p>Installing Homebrew on Mac</p>
+       <p>Get the Command line tool</p>
+       <div class="code-block"></div>
+      </div>
+      
+    </div>
+    <div class="col-sm-3 tags"></div>
   </div>
-</nav>
-<body class="container">
-  <h1>Created by : Akash Chandra</h1>
+  <script type="text/javascript">
+  
+  </script>
 </body>
 </html>
