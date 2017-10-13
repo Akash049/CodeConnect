@@ -1,0 +1,184 @@
+<html>
+    <head>
+      <title>CodeConnect</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="assets/js/jquery.min.js"></script>
+      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+      <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+      <script src="assets/js/bootstrap.min.js"></script>
+      
+      <style>
+      @font-face {
+          font-family: 'Lobster'; 
+          src: url("assets/fonts/Lobster_1.3.otf") format("opentype");
+          font-style: normal;
+      }
+      .profile-image {
+        max-width:100%;
+        max-height:100%;
+        border-radius:50%;
+        border:0px solid #000;
+      }
+      .profile-name {
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size:150%;
+      }
+      .profile-description {
+        font-family:cursive;
+        font-size:90%;
+        color: #888;
+      }
+      .blog-date {
+        font-size:90%;
+        color:#ababab;
+        margin-bottom:10%;
+      }
+      .blog-content {
+        font-size:120%;
+        height:relative;
+        height:250px;
+        max-height:250px;
+        overflow-y:scroll;
+      }
+      .add-new {
+          font-size : 200%;
+          margin-top: 2%;
+          color : lightgreen;
+          display: block;
+      }
+      .blog-title:hover{
+        border: 0;
+      }
+      .blog-title{
+        width: 100%;
+        height: auto;
+        color: #21A39B;
+        background: white;
+        border-radius: 5px;
+        border: 0;
+        word-wrap: break-word;
+        word-break: break-all;
+        font-size : 250%;
+        font-weight: bold;
+      }
+      .input-text {
+          width: 100%;
+          height: 80%;
+          background: white;
+          border-left:solid #21A39B 3px;
+          border-right:solid #21A39B 0px;
+          border-top:solid #21A39B 0px;
+          border-bottom:solid #21A39B 0px;
+          word-wrap: break-word;
+          word-break: break-all;
+          font-size : 120%;
+      }
+      .edit-option {
+         display: inline-block;
+         float: left;
+         margin: 5%;
+         font-size: 150%;
+      }
+      textarea:focus, input:focus{
+          outline: none;
+      }
+      .code-content {
+        text-align: start;
+        border-radius: 5px;
+        width: 100%;
+        height: 10%;
+        background: lightgray;
+      }
+      .code-block-head {
+          padding:1%;
+      }
+      .code-block-body{
+        width: 100%;
+        height: 80%;
+        border-radius: 5px;
+        border:2px solid #bbb;
+        word-wrap: break-word;
+        word-break: break-all;
+        font-size : 100%;
+      }
+      .common-head{
+        margin-bottom:5%;
+        height:auto;
+      }
+      .text{
+          height: 20%;
+      }
+      .code{
+          height: 15%;
+      }
+      .code-highlight{
+        background: #ddd;
+        padding: 1%;
+        border-radius:5px;
+        font-size: 100%;
+      }
+      .text-highlight{
+        font-size: 120%;
+      }
+      </style>
+    </head>
+  <body>
+    <nav class="navbar navbar-inverse" style="border-radius:0;background:#3F51B5;">
+      <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="" class="navbar-brand" style="color:white;">
+                CodeConnect
+            </a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">myBlog</a></li>
+            <li><a href="#">About me</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>  
+      </div>
+    </nav>
+    <div class="main row"> 
+      <div class="col-sm-3 profile">
+        <div style="width:70%;margin:15%;text-align:center;">
+          <div style="width:40%;margin-left:30%;margin-right:30%;margin-bottom:15%;">
+            <img src="assets/images/profile.jpg" class="profile-image">
+          </div>
+          <p class="profile-name">Akash Chandra</p>
+          <p class="profile-description">Full Stack Software Engineer@myCol.in , Blogger , Traveller</p>
+          <div>
+            <button><i class="fa fa-facebook" aria-hidden="true"></i></button>
+            <button><i class="fa fa-linkedin-square" aria-hidden="true"></i></button>
+            <button><i class="fa fa-github" aria-hidden="true"></i></button>
+            <button><i class="fa fa-twitter" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-5 content">
+        <div class="blog-head">
+            <textarea name="text" class="blog-title" id="code-block-body-'+i+'" wrap="soft" placeholder="Title..."></textarea>
+        </div>
+        <p id="blog_date">Sept,02</p>
+        <div id="blog-content">
+        </div>
+        <img src="assets/images/add_button.png" class="add-new dropdown-toggle" data-toggle="dropdown" style="width:10%;">
+            <ul class="dropdown-menu drop-filter-desktop" style="margin-left:2%;width:relative;">
+                <li class="edit-option"><i id="add-text-box" class="fa fa-file-text add-box" aria-hidden="true"></i>
+                </li>
+                <li class="edit-option"><i id="add-code-box" class="fa fa-file-code-o add-box" aria-hidden="true"></i>
+                </li>
+                <li class="edit-option"><i id="add-image-box" class="fa fa-file-image-o add-box" aria-hidden="true"></i>
+                </li>
+                <li class="edit-option"><i id="add-vedio-box" class="fa fa-file-movie-o add-box" aria-hidden="true"></i>
+                </li>
+            </ul>
+        
+      </div>
+      <div class="col-sm-3 tags"></div>
+    </div>
+    
+    <script type="text/javascript" src="assets/js/createBlog.js" ></script>
+  </body>
+  </html>
+  
